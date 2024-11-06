@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const bcrypt = require('bcrypt');
 const twilio = require('twilio');
 const axios = require('axios');  // Add axios for handling requests to Flask API
-
+require('dotenv').config();
 const app = express();
 const PORT = 5000;
 const FLASK_API_URL = 'http://localhost:5001';  // Flask API URL
