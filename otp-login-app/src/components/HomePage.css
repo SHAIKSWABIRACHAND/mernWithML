@@ -1,0 +1,152 @@
+/* HomePage.css - Light Purple with Enhanced Rating Effect */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f0e6f6 40%, #dcd0f2 100%); /* Light purple gradient */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.container {
+  background-color: #ffffff; /* White form container */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* width: 400px; */
+  margin: 300px 0 0 0;
+  border: 2px solid #d3cce3; /* Light purple border */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+h1 {
+  text-align: center;
+  color: #2c2c2c; /* Darker black text */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #2c2c2c; /* Darker black text */
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #d3cce3; /* Light purple border for input fields */
+  margin-bottom: 12px;
+  background-color: #f9f9f9; /* Light input background */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+button {
+  padding: 12px;
+  background-color: #8e75d1; /* Light purple button */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7b65b3; /* Slightly darker on hover */
+}
+
+/* Predicted rating effects */
+#result {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #4caf50; /* Green for positive emphasis */
+  font-weight: bold;
+  border: 2px solid #4caf50;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e9f7eb; /* Light green background */
+  animation: glow 2s infinite alternate, fadeIn 1.5s ease-in-out;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.5); /* Glowing effect */
+}
+
+#error {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #d9534f; /* Red for error messages */
+}
+
+/* Glow animation for the rating */
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 30px rgba(76, 175, 80, 1);
+  }
+}
+
+/* Fade-in effect for result */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Background design with animated circles */
+body::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(142, 117, 209, 0.4); /* Transparent purple circle */
+  border-radius: 50%;
+  z-index: -1;
+  animation: move 8s infinite ease-in-out;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(142, 117, 209, 0.3); /* Transparent purple circle */
+  border-radius: 50%;
+  z-index: -1;
+  animation: move 12s infinite ease-in-out reverse;
+}
+
+@keyframes move {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(30px, 30px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
